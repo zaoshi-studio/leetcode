@@ -63,6 +63,7 @@ type TreeNode struct {
  * }
  */
 func swapPairs(head *ListNode) *ListNode {
+
 	dummy := &ListNode{Next: head}
 
 	for cur, pre := head, dummy; cur != nil && cur.Next != nil; {
