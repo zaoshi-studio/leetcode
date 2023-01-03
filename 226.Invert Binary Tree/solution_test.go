@@ -69,13 +69,14 @@ func invertTree(root *TreeNode) *TreeNode {
 			return
 		}
 
-		// 先在左右子树内进行交换, 再交换左右子树
-		invert(node.Left)
-		invert(node.Right)
-
 		tmp := node.Left
 		node.Left = node.Right
 		node.Right = tmp
+
+		// 先在左右子树内进行交换, 再交换左右子树
+		// 自底向上 和 自顶向下都可以
+		invert(node.Left)
+		invert(node.Right)
 
 		return
 	}
