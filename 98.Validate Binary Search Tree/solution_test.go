@@ -85,20 +85,6 @@ func isValidBST1(root *TreeNode) bool {
 
 		rightMin, _ := traverse(node.Right)
 
-		//fmt.Printf("node:%d , left:%d , right: %d\n", node.Val, leftMax, rightMin)
-
-		//if leftMax == -1 && rightMin == -1 {
-		//	return node.Val, node.Val
-		//}
-		//
-		//if leftMax != -1 && rightMin == -1 && node.Val <= leftMax {
-		//	ans = false
-		//}
-		//
-		//if leftMax == -1 && rightMin != -1 && node.Val >= rightMin {
-		//	ans = false
-		//}
-
 		if leftMax >= node.Val || node.Val >= rightMin {
 			fmt.Printf("node:%d , left:%d , right: %d\n", node.Val, leftMax, rightMin)
 			ans = false
