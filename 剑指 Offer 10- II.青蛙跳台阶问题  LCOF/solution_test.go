@@ -6,7 +6,7 @@ import (
 
 /**
 English description is not available for the problem. Please switch to Chinese.
- Related Topics 记忆化搜索 数学 动态规划 👍 425 👎 0
+ Related Topics 记忆化搜索 数学 动态规划 👍 355 👎 0
 
 */
 
@@ -22,25 +22,23 @@ type TreeNode struct {
 }
 
 // leetcode submit region begin(Prohibit modification and deletion)
+func numWays(n int) int {
 
-func fib1(n int) int {
-	if n <= 1 {
-		return n
-	}
+	const mod = 1e9 + 7
 
 	f1, f2, f3 := 0, 0, 1
-	const mod int = 1e9 + 7
 
-	for i := 2; i <= n; i++ {
+	for i := 1; i <= n; i++ {
 		f1 = f2
 		f2 = f3
 		f3 = (f1 + f2) % mod
 	}
+
 	return f3
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
 
-func TestFeiBoNaQiShuLieLcof(t *testing.T) {
+func TestQingWaTiaoTaiJieWenTiLcof(t *testing.T) {
 
 }
