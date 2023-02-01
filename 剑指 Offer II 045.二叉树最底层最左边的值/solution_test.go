@@ -1,7 +1,6 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -47,8 +46,6 @@ func findBottomLeftValue(root *TreeNode) int {
 		node := queue[0]
 		ans = node.Val
 
-		fmt.Println(node.Val)
-
 		// 从右向左的层序遍历，保证底层最左侧结点在最后一个
 		if node.Right != nil {
 			queue = append(queue, node.Right)
@@ -62,13 +59,6 @@ func findBottomLeftValue(root *TreeNode) int {
 	}
 
 	return ans
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
