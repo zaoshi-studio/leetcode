@@ -1,7 +1,6 @@
 package leetcode
 
 import (
-	"fmt"
 	"math"
 	"testing"
 )
@@ -86,7 +85,6 @@ func isValidBST1(root *TreeNode) bool {
 		rightMin, _ := traverse(node.Right)
 
 		if leftMax >= node.Val || node.Val >= rightMin {
-			fmt.Printf("node:%d , left:%d , right: %d\n", node.Val, leftMax, rightMin)
 			ans = false
 		}
 
